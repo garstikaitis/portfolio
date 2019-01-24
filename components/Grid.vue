@@ -5,7 +5,7 @@
       <img src="/images/cryptosandbox.png" @mouseenter="handleHover(0)">
       <div
         class="overlay"
-        style="background-color: rgba(25, 114, 164, 0.9);"
+        style="background-color: rgba(63, 223, 255, 0.9);"
         @mouseleave="handleHover(null)"
         v-if="showOverlayIndex === 0"
       >
@@ -14,7 +14,7 @@
         <button class="cta">
           <nuxt-link to="/cryptosandbox">
             Read more
-            <img src="/images/read-more.png">
+            <img src="/images/read-more-white.png">
           </nuxt-link>
         </button>
       </div>
@@ -32,7 +32,7 @@
         <button class="cta">
           <nuxt-link to="/interhelps">
             Read more
-            <img src="/images/read-more.png">
+            <img src="/images/read-more-white.png">
           </nuxt-link>
         </button>
       </div>
@@ -48,7 +48,7 @@
         <div style="color: black;" class="name">GAME OF THRONES WIKI</div>
         <div style="color: black;" class="description">Encyclopedia app for game of thrones TV show</div>
         <button style="color: black; border: 1px solid black;" class="cta">
-          <nuxt-link to="/gotwiki">
+          <nuxt-link style="color: black;" to="/gotwiki">
             Read more
             <img src="/images/read-more.png">
           </nuxt-link>
@@ -68,7 +68,7 @@
         <button class="cta">
           <nuxt-link to="/talenthub">
             Read more
-            <img src="/images/read-more.png">
+            <img src="/images/read-more-white.png">
           </nuxt-link>
         </button>
       </div>
@@ -86,7 +86,7 @@
         <button class="cta">
           <nuxt-link to="/widget">
             Read more
-            <img src="/images/read-more.png">
+            <img src="/images/read-more-white.png">
           </nuxt-link>
         </button>
       </div>
@@ -104,7 +104,7 @@
         <button class="cta">
           <nuxt-link to="/voice-in">
             Read more
-            <img src="/images/read-more.png">
+            <img src="/images/read-more-white.png">
           </nuxt-link>
         </button>
       </div>
@@ -122,7 +122,7 @@
         <button class="cta">
           <nuxt-link to="/another-one">
             Read more
-            <img src="/images/read-more.png">
+            <img src="/images/read-more-white.png">
           </nuxt-link>
         </button>
       </div>

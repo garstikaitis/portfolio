@@ -3,7 +3,7 @@
     <div class="hero hero-text">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h2 class="title">Stand out from the crowd</h2>
+          <h2 class="title">Projects</h2>
         </div>
       </div>
     </div>
