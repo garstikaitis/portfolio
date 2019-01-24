@@ -2,7 +2,7 @@
   <div class="grid">
     <div class="grid-item">
       <div class="content">
-        <img src="/images/cryptosandbox.png" @mouseenter="handleHover(0)">
+        <img :src="require('../images/cryptosandbox.png')" @mouseenter="handleHover(0)">
         <div
           class="overlay"
           style="background-color: rgba(63, 223, 255, 0.9);"
@@ -22,7 +22,7 @@
     </div>
     <div class="grid-item">
       <div class="content">
-        <img src="/images/interhelps.png" @mouseenter="handleHover(1)">
+        <img :src="require('/images/interhelps.png')" @mouseenter="handleHover(1)">
         <div
           class="overlay"
           style="background-color: rgba(247, 63, 82, 0.9);"
@@ -42,7 +42,7 @@
     </div>
     <div class="grid-item">
       <div class="content">
-        <img src="/images/GOTWiki.png" @mouseenter="handleHover(2)">
+        <img :src="require('/images/GOTWiki.png')" @mouseenter="handleHover(2)">
         <div
           class="overlay"
           style="background-color: rgba(255, 254, 184, 0.9);"
@@ -65,7 +65,7 @@
     </div>
     <div class="grid-item">
       <div class="content">
-        <img src="/images/talenthub.svg" @mouseenter="handleHover(3)">
+        <img :src="require('/images/talenthub.svg')" @mouseenter="handleHover(3)">
         <div
           class="overlay"
           style="background-color: rgba(38, 191, 127, 0.9);"
@@ -97,7 +97,7 @@
           <button class="cta">
             <nuxt-link to="/widget">
               Read more
-              <img src="/images/read-more-white.png">
+              <img :src="require('/images/read-more-white.png')">
             </nuxt-link>
           </button>
         </div>
@@ -117,7 +117,7 @@
           <button class="cta">
             <nuxt-link to="/voice-in">
               Read more
-              <img src="/images/read-more-white.png">
+              <img :src="require('/images/read-more-white.png')">
             </nuxt-link>
           </button>
         </div>
@@ -125,7 +125,7 @@
     </div>
     <div class="grid-item">
       <div class="content">
-        <img src="/images/another-one.png" @mouseenter="handleHover(6)">
+        <img :src="require('/images/another-one.png')" @mouseenter="handleHover(6)">
         <div
           class="overlay"
           style="background-color: rgba(20, 4, 64, 0.9);"
