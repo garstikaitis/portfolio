@@ -14,9 +14,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [
-      { src: 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js' }
-    ]
+
   },
 
   /*
