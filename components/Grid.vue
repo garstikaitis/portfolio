@@ -202,6 +202,8 @@ export default {
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   grid-auto-rows: 20px;
+  width: 80%;
+  margin: 0 auto;
 }
 .grid-sizer {
   width: 50%;

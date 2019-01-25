@@ -17,6 +17,13 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+}
 
 *,
 *:before,
