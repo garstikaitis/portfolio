@@ -2,6 +2,26 @@
   <div class="grid">
     <div class="grid-item">
       <div class="content">
+        <img :src="require('../static/images/widget.png')" @mouseenter="handleHover(4)">
+        <div
+          class="overlay"
+          style="background-color: rgba(53, 5, 235, 0.9);"
+          @mouseleave="handleHover(null)"
+          v-if="showOverlayIndex === 4"
+        >
+          <div class="name">Embeddable widget</div>
+          <div class="description">Embeddable widget for collecting data from users</div>
+          <button class="cta">
+            <nuxt-link to="/widget">
+              Read more
+              <img src="/images/read-more-white.png">
+            </nuxt-link>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="content">
         <img :src="require('../static/images/cryptosandbox.png')" @mouseenter="handleHover(0)">
         <div
           class="overlay"
@@ -65,7 +85,7 @@
     </div>
     <div class="grid-item">
       <div class="content">
-        <img :src="require('../static/images/talenthub.svg')" @mouseenter="handleHover(3)">
+        <img :src="require('../static/images/talenthub.png')" @mouseenter="handleHover(3)">
         <div
           class="overlay"
           style="background-color: rgba(38, 191, 127, 0.9);"
@@ -76,26 +96,6 @@
           <div class="description">Landing page for a startup</div>
           <button class="cta">
             <nuxt-link to="/talenthub">
-              Read more
-              <img src="/images/read-more-white.png">
-            </nuxt-link>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="grid-item">
-      <div class="content">
-        <img :src="require('../static/images/widget.png')" @mouseenter="handleHover(4)">
-        <div
-          class="overlay"
-          style="background-color: rgba(53, 5, 235, 0.9);"
-          @mouseleave="handleHover(null)"
-          v-if="showOverlayIndex === 4"
-        >
-          <div class="name">Embeddable widget</div>
-          <div class="description">Embeddable widget for collecting data from users</div>
-          <button class="cta">
-            <nuxt-link to="/widget">
               Read more
               <img src="/images/read-more-white.png">
             </nuxt-link>
