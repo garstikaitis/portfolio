@@ -147,6 +147,7 @@
 </template>
 
 <script>
+const imagesLoaded = require('imagesloaded')
 export default {
   data() {
     return {
@@ -173,17 +174,25 @@ export default {
       item.style.gridRowEnd = 'span ' + rowSpan
     },
     resizeAllGridItems() {
+      console.log('hi')
       let allItems = document.getElementsByClassName('grid-item')
       for (let x = 0; x < allItems.length; x++) {
-        this.resizeGridItem(allItems[x])
+        imagesLoaded(allItems[x], this.resizeInstance)
       }
+    },
+    resizeInstance(instance) {
+      const item = instance.elements[0]
+      this.resizeGridItem(item)
     }
   },
-  created() {
+  mounted() {
     if (process.browser) {
       window.onNuxtReady(app => {
-        this.resizeAllGridItems()
-        window.addEventListener('resize', this.resizeAllGridItems)
+        imagesLoaded('.grid', () => {
+          window.dispatchEvent(new Event('resize'))
+          this.resizeAllGridItems()
+          window.addEventListener('resize', this.resizeAllGridItems)
+        })
       })
     }
   }

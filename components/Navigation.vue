@@ -1,9 +1,9 @@
 <template>
   <div class="navbar is-fluid">
     <div class="navbar-inner">
-      <nuxt-link to="/">
+      <a href="/">
         <img src="/images/logo.png">
-      </nuxt-link>
+      </a>
       <div class="navbar-end">
         <button @click="writeMail()" to="/contact" class="navbar-item">Let's get in touch</button>
       </div>
