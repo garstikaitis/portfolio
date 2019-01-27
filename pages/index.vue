@@ -3,7 +3,7 @@
     <div class="hero hero-text">
       <div class="columns is-centered">
         <div class="column has-text-centered purple">
-          <h2 class="title">Web developer</h2>
+          <h2 class="title">Full stack developer</h2>
           <p>A geek with a hat 🧢 Turning your idea to reality</p>
           <img src="/images/hero.jpg">
           <div class="tabs">
@@ -28,20 +28,21 @@
               <ul class="list">
                 <li class="item">Creating & implementing exquisite interfaces</li>
                 <li class="item">Finding the tools that are right for the job</li>
+                <li class="item">Proposing solutions built from scratched</li>
                 <li class="item">Consulting about usability</li>
-                <li class="item">User experience</li>
+                <li class="item">Nerding about user experience</li>
               </ul>
             </div>
             <div class="skill-wrapper" v-else-if="tabActive === 'technologies'">
               <ul class="list">
                 <li class="item">React</li>
                 <li class="item">Vue.js</li>
+                <li class="item">React Native</li>
                 <li class="item">Laravel</li>
                 <li class="item">Node.js</li>
                 <li class="item">Amazon Web Services</li>
                 <li class="item">Docker</li>
                 <li class="item">SASS</li>
-                <li class="item">BEM</li>
               </ul>
             </div>
             <div class="skill-wrapper" v-else-if="tabActive === 'process'">
@@ -67,12 +68,11 @@
     <section class="section">
       <div class="divider">
         <div class="heading">Liked what you saw?</div>
+        <div class="cta">
+          <button @click="writeMail()" class="button">Let's get in touch!</button>
+        </div>
       </div>
     </section>
-    <div class="elevator-container">
-      Let's get in
-      <button class="button">touch!</button>
-    </div>
   </section>
 </template>
 
@@ -82,11 +82,28 @@ export default {
     return {
       tabActive: 'competences'
     }
+  },
+  methods: {
+    writeMail() {
+      var mail = document.createElement('a')
+      mail.href = 'mailto:hi@gintaras.tech'
+      mail.click()
+    }
   }
 }
 </script>
 
 <style lang="scss">
+@keyframes driveInTitle {
+  from {
+    transform: translate(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
 .hero-text {
   width: 85%;
   margin: 0 auto;
@@ -112,12 +129,18 @@ export default {
     display: flex;
     width: 50%;
     margin-top: 20px;
+    animation: driveInTitle 1s cubic-bezier(0.57, 0.21, 0.69, 1.25);
     .tab {
       padding: 20px;
       border: 2px solid black;
       margin-right: 10px;
       border-radius: 8px;
       cursor: pointer;
+      transition: all 0.2s ease-in;
+      &:hover {
+        background: black;
+        color: #ffdc5f;
+      }
       &.active {
         background: black;
         color: #ffdc5f;
@@ -133,9 +156,11 @@ export default {
   }
   h2 {
     color: black;
+    animation: driveInTitle 0.8s cubic-bezier(0.57, 0.21, 0.69, 1.25);
   }
   p {
     color: black;
+    animation: driveInTitle 0.9s cubic-bezier(0.57, 0.21, 0.69, 1.25);
   }
 }
 .skills-container {
@@ -150,7 +175,7 @@ export default {
     align-items: center;
     width: 100%;
     padding-bottom: 30px;
-
+    animation: driveInTitle 1s cubic-bezier(0.57, 0.21, 0.69, 1.25);
     .list {
       list-style: none;
       width: 100%;
@@ -160,9 +185,9 @@ export default {
         font-family: 'Slabo 27px';
         font-size: 27px;
         &.last {
-          text-align: center;
           button {
-            border: 2px solid #ffdd00;
+            border: 2px solid black;
+            background: transparent;
             padding: 20px;
             border-radius: 8px;
             color: black;
@@ -172,7 +197,8 @@ export default {
             transition: all 0.2s ease-in;
             cursor: pointer;
             &:hover {
-              background-color: #ffdd00;
+              background-color: black;
+              color: #ffdc5f;
             }
             &:active {
               outline: none;
@@ -212,19 +238,24 @@ export default {
   width: 100vw;
   background: #ffdd00;
   padding: 50px;
-}
-.elevator-container {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  background-color: white;
-  margin: 0 auto;
-  margin-top: -20px;
-  margin-bottom: 50px;
-  /* margin: 0 auto; */
-  border-radius: 8px;
-  padding: 30px;
-  border: 1px solid #e8e8e8;
-  box-shadow: 0px 10px 26px 0px rgba(0, 0, 0, 0.16);
+  .cta {
+    text-align: center;
+    button {
+      border: 2px solid black;
+      padding: 20px;
+      border-radius: 8px;
+      color: black;
+      background: #ffdd00;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: all 0.2s ease-in;
+      cursor: pointer;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
 }
 </style>

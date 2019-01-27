@@ -5,14 +5,22 @@
         <img src="/images/logo.png">
       </nuxt-link>
       <div class="navbar-end">
-        <nuxt-link to="/contact" class="navbar-item">Let's get in touch</nuxt-link>
+        <button @click="writeMail()" to="/contact" class="navbar-item">Let's get in touch</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    writeMail() {
+      var mail = document.createElement('a')
+      mail.href = 'mailto:hi@gintaras.tech'
+      mail.click()
+    }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -33,13 +41,15 @@ export default {}
     }
     .navbar-end {
       margin-right: 20px;
-      a {
+      button {
         border: 2px solid black;
         padding: 20px;
         border-radius: 8px;
         color: black;
         text-decoration: none;
         font-weight: 500;
+        background-color: transparent;
+        cursor: pointer;
         font-size: 16px;
         transition: all 0.2s ease-in;
         &:hover {

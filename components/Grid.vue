@@ -254,12 +254,17 @@ export default {
           align-items: center;
           justify-content: center;
           color: white;
+          text-decoration: none;
+          &:hover {
+            img {
+              margin-left: 20px;
+              transition: all 0.2s ease-in;
+              transform: scaleX(1.5) translateX(20px);
+            }
+          }
           img {
             margin-left: 20px;
             transition: all 0.2s ease-in;
-            &:hover {
-              transform: scaleX(1.5) translateX(20px);
-            }
           }
         }
       }
