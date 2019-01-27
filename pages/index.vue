@@ -284,10 +284,33 @@ export default {
   }
 }
 @media only screen and (max-width: 500px) {
+  .hero-text {
+    width: 100%;
+    margin: 0 auto;
+  }
   .purple {
-    img {
-      height: 100%;
+    margin-top: initial;
+    position: relative;
+    overflow: hidden;
+    p {
     }
+    h2 {
+      font-size: 30px;
+    }
+    img {
+      height: initial;
+      width: initial;
+    }
+    .tabs {
+      flex-direction: column;
+      width: initial;
+      .tab {
+        margin: 10px 0;
+      }
+    }
+  }
+  .skills-container {
+    width: initial;
   }
 }
 </style>

@@ -60,4 +60,14 @@ export default {
     }
   }
 }
+@media only screen and (max-width: 500px) {
+  .navbar {
+    .navbar-inner {
+      justify-content: center;
+      .navbar-end {
+        display: none;
+      }
+    }
+  }
+}
 </style>

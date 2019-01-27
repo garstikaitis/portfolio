@@ -283,8 +283,22 @@ export default {
     }
   }
 }
-/* 2 columns wide */
-// .grid-item--width2 {
-//   width: 100%;
-// }
+@media only screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    .grid-item {
+      .content {
+        .overlay {
+          .name {
+            font-size: 22px;
+            margin-bottom: 10px;
+          }
+          .description {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
 </style>
