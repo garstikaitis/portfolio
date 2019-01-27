@@ -28,6 +28,9 @@ module.exports = {
       {
         src: './static/ga.js'
       }
+      {
+        src: './static/hotjar.js'
+      }
     ]
   },
 
