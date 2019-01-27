@@ -53,7 +53,7 @@
                 <li class="item">Working within agile framework</li>
                 <li class="item">Iterating</li>
                 <li class="item last">
-                  <button>See example</button>
+                  <button @click="navigate">See example</button>
                 </li>
               </ul>
             </div>
@@ -110,6 +110,9 @@ export default {
       var mail = document.createElement('a')
       mail.href = 'mailto:hi@gintaras.tech'
       mail.click()
+    },
+    navigate() {
+      window.location.href = '/process'
     }
   }
 }
@@ -277,6 +280,13 @@ export default {
         background-color: black;
         color: white;
       }
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .purple {
+    img {
+      height: 100%;
     }
   }
 }
