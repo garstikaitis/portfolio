@@ -34,7 +34,31 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: 'Embeddable widget | Talenthub',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Widget which can be embedded to career sites and start tracking your candidates recruitment experience'
+        }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css?family=Asap|Quattrocento|Slabo+27px'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

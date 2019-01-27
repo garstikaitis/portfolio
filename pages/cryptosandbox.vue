@@ -44,7 +44,31 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: 'Cryptocurrency trading sandbox | CryptoSandbox',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Web application which allows users to trade cryptocurrencies by using fictional money'
+        }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css?family=Asap|Quattrocento|Slabo+27px'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

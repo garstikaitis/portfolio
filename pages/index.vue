@@ -24,7 +24,7 @@
             >Process</div>
           </div>
           <div class="skills-container">
-            <div class="skill-wrapper" v-if="tabActive === 'competences'">
+            <div class="skill-wrapper" v-show="tabActive === 'competences'">
               <ul class="list">
                 <li class="item">Creating & implementing exquisite interfaces</li>
                 <li class="item">Finding the tools that are right for the job</li>
@@ -33,7 +33,7 @@
                 <li class="item">Nerding about user experience</li>
               </ul>
             </div>
-            <div class="skill-wrapper" v-else-if="tabActive === 'technologies'">
+            <div class="skill-wrapper" v-show="tabActive === 'technologies'">
               <ul class="list">
                 <li class="item">React</li>
                 <li class="item">Vue.js</li>
@@ -45,7 +45,7 @@
                 <li class="item">SASS</li>
               </ul>
             </div>
-            <div class="skill-wrapper" v-else-if="tabActive === 'process'">
+            <div class="skill-wrapper" v-show="tabActive === 'process'">
               <ul class="list">
                 <li class="item">Analyzing business requirements</li>
                 <li class="item">Coming up with content requirements</li>
@@ -78,6 +78,28 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: 'Gintaras Arstikaitis | Portfolio',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Full stack developer with 2+ years of experience'
+        }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css?family=Asap|Quattrocento|Slabo+27px'
+        }
+      ]
+    }
+  },
   data() {
     return {
       tabActive: 'competences'
@@ -175,7 +197,7 @@ export default {
     align-items: center;
     width: 100%;
     padding-bottom: 30px;
-    animation: driveInTitle 1s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+    animation: driveInTitle 0.5s cubic-bezier(0.57, 0.21, 0.69, 1.25);
     .list {
       list-style: none;
       width: 100%;

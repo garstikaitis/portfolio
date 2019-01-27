@@ -42,6 +42,26 @@
     </div>
     <div class="grid-item">
       <div class="content">
+        <img :src="require('../static/images/talenthub.png')" @mouseenter="handleHover(3)">
+        <div
+          class="overlay"
+          style="background-color: rgba(38, 191, 127, 0.9);"
+          @mouseleave="handleHover(null)"
+          v-if="showOverlayIndex === 3"
+        >
+          <div class="name">Talenthub.io</div>
+          <div class="description">Landing page for a startup</div>
+          <button class="cta">
+            <nuxt-link to="/talenthub">
+              Read more
+              <img src="/images/read-more-white.png">
+            </nuxt-link>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="content">
         <img :src="require('../static/images/interhelps.png')" @mouseenter="handleHover(1)">
         <div
           class="overlay"
@@ -78,26 +98,6 @@
             <nuxt-link style="color: black;" to="/gotwiki">
               Read more
               <img src="/images/read-more.png">
-            </nuxt-link>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="grid-item">
-      <div class="content">
-        <img :src="require('../static/images/talenthub.png')" @mouseenter="handleHover(3)">
-        <div
-          class="overlay"
-          style="background-color: rgba(38, 191, 127, 0.9);"
-          @mouseleave="handleHover(null)"
-          v-if="showOverlayIndex === 3"
-        >
-          <div class="name">Talenthub.io</div>
-          <div class="description">Landing page for a startup</div>
-          <button class="cta">
-            <nuxt-link to="/talenthub">
-              Read more
-              <img src="/images/read-more-white.png">
             </nuxt-link>
           </button>
         </div>

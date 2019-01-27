@@ -32,7 +32,31 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: 'Promotional event website | Interhelps',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Promotional website for event held in Aarhus, Denmark where students able to meet real companies'
+        }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css?family=Asap|Quattrocento|Slabo+27px'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
