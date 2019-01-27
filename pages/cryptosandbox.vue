@@ -14,7 +14,7 @@
     </div>
     <div class="hero">
       <div class="list">
-        <div class="list-item" v-for="i in 5" :key="i">
+        <div class="list-item" v-for="i in 2" :key="i">
           <img :src="`/images/cryptosandbox/${i}.png`">
         </div>
       </div>
