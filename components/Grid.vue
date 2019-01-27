@@ -174,7 +174,6 @@ export default {
       item.style.gridRowEnd = 'span ' + rowSpan
     },
     resizeAllGridItems() {
-      console.log('hi')
       let allItems = document.getElementsByClassName('grid-item')
       for (let x = 0; x < allItems.length; x++) {
         imagesLoaded(allItems[x], this.resizeInstance)
