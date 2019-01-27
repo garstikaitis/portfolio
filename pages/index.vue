@@ -61,7 +61,7 @@
         </div>
       </div>
     </div>
-    <section class="section">
+    <section class="section mobile">
       <div class="heading">Recent works</div>
       <Grid/>
     </section>
@@ -311,6 +311,9 @@ export default {
   }
   .skills-container {
     width: initial;
+  }
+  .mobile {
+    margin-top: -65px;
   }
 }
 </style>
