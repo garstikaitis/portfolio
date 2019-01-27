@@ -181,8 +181,10 @@ export default {
   },
   created() {
     if (process.browser) {
-      window.onload = this.resizeAllGridItems()
-      window.addEventListener('resize', this.resizeAllGridItems)
+      window.onNuxtReady(app => {
+        this.resizeAllGridItems()
+        window.addEventListener('resize', this.resizeAllGridItems)
+      })
     }
   }
 }
