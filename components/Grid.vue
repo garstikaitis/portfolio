@@ -187,6 +187,8 @@ export default {
   },
   mounted() {
     if (process.browser) {
+      window.dispatchEvent(new Event('resize'))
+      window.addEventListener('resize', this.resizeAllGridItems)
       window.onNuxtReady(app => {
         imagesLoaded('.grid', () => {
           window.dispatchEvent(new Event('resize'))
