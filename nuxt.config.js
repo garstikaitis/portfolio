@@ -23,6 +23,9 @@ module.exports = {
     ],
     script: [
       {
+        src: 'https://www.googletagmanager.com/gtag/js?id=UA-133308006-1'
+      },
+      {
         src: './static/ga.js'
       }
     ]
