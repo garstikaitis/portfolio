@@ -21,9 +21,9 @@ export default {
   top: 0;
   width: 100%;
   a {
-    border: 2px solid #ffdd55;
-    background: transparent;
-    color: #ffdd55;
+    border: 2px solid #89d1ff;
+    background: #89d1ff;
+    color: black;
     cursor: pointer;
     font-size: 15px;
     border-radius: 8px;
@@ -38,7 +38,7 @@ export default {
       outline: none;
     }
     &:hover {
-      background-color: #ffdd55;
+      background-color: #89d1ff;
       color: black;
     }
   }
