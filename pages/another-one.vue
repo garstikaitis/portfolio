@@ -1,41 +1,41 @@
 <template>
-  <div class="container">
-    <div class="hero center">
-      <h1>Concept</h1>
-      <p>Mobile application which shows various discounts on groceries in Denmark stores. Users are able to create their own shopping lists inside the application before going to store.</p>
-    </div>
-    <div class="hero">
-      <div class="list">
-        <div class="list-item">
-          <img :src="`/images/another-one.png`">
+  <div>
+    <InnerNavigation link="https://expo.io/@gintse/another-one"></InnerNavigation>
+
+    <div class="container">
+      <div class="hero center">
+        <h1>Concept</h1>
+        <p>Mobile application which shows various discounts on groceries in Denmark stores. Users are able to create their own shopping lists inside the application before going to store.</p>
+      </div>
+      <div class="hero">
+        <div class="list">
+          <div class="list-item">
+            <img :src="`/images/another-one.png`">
+          </div>
         </div>
       </div>
-    </div>
-    <div class="hero dark">
-      <h1>History</h1>
-      <p>Application was started as a school project.</p>
-    </div>
-    <div class="hero light">
-      <h1>Technologies used</h1>
-      <div class="list">
-        <div class="list-item tech">React Native</div>
-        <div class="list-item tech">Redux</div>
-        <div class="list-item tech">AWS</div>
-        <div class="list-item tech">Node.js</div>
-        <div class="list-item tech">Mongo DB</div>
-        <div class="list-item tech">Laravel</div>
+      <div class="hero dark">
+        <h1>History</h1>
+        <p>Application was started as a school project.</p>
       </div>
-    </div>
-    <div class="cta">
-      <a href="https://expo.io/@gintse/another-one">
-        <button>Check it out</button>
-      </a>
+      <div class="hero light">
+        <h1>Technologies used</h1>
+        <div class="list">
+          <div class="list-item tech">React Native</div>
+          <div class="list-item tech">Redux</div>
+          <div class="list-item tech">AWS</div>
+          <div class="list-item tech">Node.js</div>
+          <div class="list-item tech">Mongo DB</div>
+          <div class="list-item tech">Laravel</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  layout: 'inner',
   head() {
     return {
       title: 'Grocery discount application | Another One',

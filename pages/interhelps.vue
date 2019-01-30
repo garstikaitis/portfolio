@@ -1,38 +1,37 @@
 <template>
-  <div class="container">
-    <div class="hero center">
-      <h1>Concept</h1>
-      <p>With this event we focus on gathering the best students, organisations, and companies to create the opportunity for each other to develop and unleash their growth potential.</p>
-    </div>
-    <div class="hero">
-      <div class="list">
-        <div class="list-item" v-for="i in 3" :key="i">
-          <img :src="`/images/interhelps/${i}.png`">
+  <div>
+    <InnerNavigation link="https://interhelps.com"></InnerNavigation>
+    <div class="container">
+      <div class="hero center">
+        <h1>Concept</h1>
+        <p>With this event we focus on gathering the best students, organisations, and companies to create the opportunity for each other to develop and unleash their growth potential.</p>
+      </div>
+      <div class="hero">
+        <div class="list">
+          <div class="list-item" v-for="i in 3" :key="i">
+            <img :src="`/images/interhelps/${i}.png`">
+          </div>
         </div>
       </div>
-    </div>
-    <div class="hero dark">
-      <h1>Motivation</h1>
-      <p>Helped a group of young entrepreneurial mind-sets who aims to help international students to integrate better in to the Danish society.</p>
-    </div>
-    <div class="hero light">
-      <h1>Technologies used</h1>
-      <div class="list">
-        <div class="list-item tech">SASS</div>
-        <div class="list-item tech">Wordpress</div>
-        <div class="list-item tech">AWS</div>
+      <div class="hero dark">
+        <h1>Motivation</h1>
+        <p>Helped a group of young entrepreneurial mind-sets who aims to help international students to integrate better in to the Danish society.</p>
       </div>
-    </div>
-    <div class="cta">
-      <a href="http://interhelps.com">
-        <button>Check it out</button>
-      </a>
+      <div class="hero light">
+        <h1>Technologies used</h1>
+        <div class="list">
+          <div class="list-item tech">SASS</div>
+          <div class="list-item tech">Wordpress</div>
+          <div class="list-item tech">AWS</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  layout: 'inner',
   head() {
     return {
       title: 'Promotional event website | Interhelps',

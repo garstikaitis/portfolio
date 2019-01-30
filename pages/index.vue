@@ -142,7 +142,6 @@ export default {
   letter-spacing: 1px;
 }
 .purple {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -257,11 +256,11 @@ export default {
   font-weight: 300;
   font-size: 40px;
   margin-bottom: 50px;
-  color: #35495e;
+  color: black;
 }
 .divider {
   width: 100vw;
-  background: #ffdd00;
+  background: #ffdc5f;
   padding: 50px;
   .cta {
     text-align: center;

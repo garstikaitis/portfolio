@@ -1,40 +1,39 @@
 <template>
-  <div class="container">
-    <div class="hero center">
-      <h1>Concept</h1>
-      <p>Widget which clients could embed to their career sites and ask various questions regarding their candidates recruitment experience.</p>
-    </div>
-    <div class="hero">
-      <div class="list">
-        <div class="list-item" v-for="i in 5" :key="i">
-          <img :src="`/images/widget/${i}.png`">
+  <div>
+    <InnerNavigation link="https://s3.eu-central-1.amazonaws.com/th-widget-test/index.html"></InnerNavigation>
+    <div class="container">
+      <div class="hero center">
+        <h1>Concept</h1>
+        <p>Widget which clients could embed to their career sites and ask various questions regarding their candidates recruitment experience.</p>
+      </div>
+      <div class="hero">
+        <div class="list">
+          <div class="list-item" v-for="i in 5" :key="i">
+            <img :src="`/images/widget/${i}.png`">
+          </div>
         </div>
       </div>
-    </div>
-    <div class="hero dark">
-      <h1>History</h1>
-      <p>Project was started in back when I was working at Talenthub</p>
-    </div>
-    <div class="hero light">
-      <h1>Technologies used</h1>
-      <div class="list">
-        <div class="list-item tech">Laravel</div>
-        <div class="list-item tech">Vue.js</div>
-        <div class="list-item tech">Vuex</div>
-        <div class="list-item tech">AWS</div>
-        <div class="list-item tech">SASS</div>
+      <div class="hero dark">
+        <h1>History</h1>
+        <p>Project was started in back when I was working at Talenthub</p>
       </div>
-    </div>
-    <div class="cta">
-      <a href="https://s3.eu-central-1.amazonaws.com/th-widget-test/index.html">
-        <button>Check it out</button>
-      </a>
+      <div class="hero light">
+        <h1>Technologies used</h1>
+        <div class="list">
+          <div class="list-item tech">Laravel</div>
+          <div class="list-item tech">Vue.js</div>
+          <div class="list-item tech">Vuex</div>
+          <div class="list-item tech">AWS</div>
+          <div class="list-item tech">SASS</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  layout: 'inner',
   head() {
     return {
       title: 'Embeddable widget | Talenthub',

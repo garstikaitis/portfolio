@@ -1,31 +1,34 @@
 <template>
-  <div class="container">
-    <div class="hero center">
-      <h1>Concept</h1>
-      <p>Probably everyone knows application Tinder. Instead of people liking pictures, VoiceIN were using diferent strategy - showcasing people voices. After a match was present, people pictures would appear.</p>
-    </div>
-    <div class="hero">
-      <div class="list">
-        <div class="list-item">
-          <img :src="`/images/voice-in.jpg`">
+  <div>
+    <InnerNavigation link="/"></InnerNavigation>
+    <div class="container">
+      <div class="hero center">
+        <h1>Concept</h1>
+        <p>Probably everyone knows application Tinder. Instead of people liking pictures, VoiceIN were using diferent strategy - showcasing people voices. After a match was present, people pictures would appear.</p>
+      </div>
+      <div class="hero">
+        <div class="list">
+          <div class="list-item">
+            <img :src="`/images/voice-in.jpg`">
+          </div>
         </div>
       </div>
-    </div>
-    <div class="hero dark">
-      <h1>History</h1>
-      <p>
-        Project was started in
-        <a
-          target="_blank"
-          href="http://communities.techstars.com/denmark/aalborg/startup-weekend/"
-        >Startup Weekend Aalborg</a>
-      </p>
-    </div>
-    <div class="hero light">
-      <h1>Technologies used</h1>
-      <div class="list">
-        <div class="list-item tech">Swift</div>
-        <div class="list-item tech">Firebase</div>
+      <div class="hero dark">
+        <h1>History</h1>
+        <p>
+          Project was started in
+          <a
+            target="_blank"
+            href="http://communities.techstars.com/denmark/aalborg/startup-weekend/"
+          >Startup Weekend Aalborg</a>
+        </p>
+      </div>
+      <div class="hero light">
+        <h1>Technologies used</h1>
+        <div class="list">
+          <div class="list-item tech">Swift</div>
+          <div class="list-item tech">Firebase</div>
+        </div>
       </div>
     </div>
   </div>
@@ -33,6 +36,7 @@
 
 <script>
 export default {
+  layout: 'inner',
   head() {
     return {
       title: 'Dating application | Voice IN',

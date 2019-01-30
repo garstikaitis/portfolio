@@ -3,7 +3,8 @@
     <div class="grid-item">
       <div class="content">
         <img :src="require('../static/images/widget.png')" @mouseenter="handleHover(4)">
-        <div
+        <nuxt-link
+          to="/widget"
           class="overlay"
           style="background-color: rgba(53, 5, 235, 0.9);"
           @mouseleave="handleHover(null)"
@@ -12,19 +13,18 @@
           <div class="name">Embeddable widget</div>
           <div class="description">Embeddable widget for collecting data from users</div>
           <button class="cta">
-            <nuxt-link to="/widget">
-              Read more
-              <img src="/images/read-more-white.png">
-            </nuxt-link>
+            Read more
+            <img src="/images/read-more-white.png">
           </button>
-        </div>
+        </nuxt-link>
       </div>
     </div>
     <div class="grid-item">
       <div class="content">
         <img :src="require('../static/images/cryptosandbox.png')" @mouseenter="handleHover(0)">
-        <div
+        <nuxt-link
           class="overlay"
+          to="/cryptosandbox"
           style="background-color: rgba(63, 223, 255, 0.9);"
           @mouseleave="handleHover(null)"
           v-if="showOverlayIndex === 0"
@@ -32,18 +32,17 @@
           <div class="name">CRYPTOSANDBOX</div>
           <div class="description">Cryptocurrent trading sandbox</div>
           <button class="cta">
-            <nuxt-link to="/cryptosandbox">
-              Read more
-              <img src="/images/read-more-white.png">
-            </nuxt-link>
+            Read more
+            <img src="/images/read-more-white.png">
           </button>
-        </div>
+        </nuxt-link>
       </div>
     </div>
     <div class="grid-item">
       <div class="content">
         <img :src="require('../static/images/talenthub.png')" @mouseenter="handleHover(3)">
-        <div
+        <nuxt-link
+          to="/talenthub"
           class="overlay"
           style="background-color: rgba(38, 191, 127, 0.9);"
           @mouseleave="handleHover(null)"
@@ -52,18 +51,17 @@
           <div class="name">Talenthub.io</div>
           <div class="description">Landing page for a startup</div>
           <button class="cta">
-            <nuxt-link to="/talenthub">
-              Read more
-              <img src="/images/read-more-white.png">
-            </nuxt-link>
+            Read more
+            <img src="/images/read-more-white.png">
           </button>
-        </div>
+        </nuxt-link>
       </div>
     </div>
     <div class="grid-item">
       <div class="content">
         <img :src="require('../static/images/interhelps.png')" @mouseenter="handleHover(1)">
-        <div
+        <nuxt-link
+          to="/interhelps"
           class="overlay"
           style="background-color: rgba(247, 63, 82, 0.9);"
           @mouseleave="handleHover(null)"
@@ -72,20 +70,19 @@
           <div class="name">Interhelps</div>
           <div class="description">Representational website for event</div>
           <button class="cta">
-            <nuxt-link to="/interhelps">
-              Read more
-              <img src="/images/read-more-white.png">
-            </nuxt-link>
+            Read more
+            <img src="/images/read-more-white.png">
           </button>
-        </div>
+        </nuxt-link>
       </div>
     </div>
     <div class="grid-item">
       <div class="content">
         <img :src="require('../static/images/GOTWiki.png')" @mouseenter="handleHover(2)">
-        <div
-          class="overlay"
+        <nuxt-link
           style="background-color: rgba(255, 254, 184, 0.9);"
+          to="/gotwiki"
+          class="overlay"
           @mouseleave="handleHover(null)"
           v-if="showOverlayIndex === 2"
         >
@@ -95,18 +92,17 @@
             class="description"
           >Encyclopedia app for game of thrones TV show</div>
           <button style="color: black; border: 1px solid black;" class="cta">
-            <nuxt-link style="color: black;" to="/gotwiki">
-              Read more
-              <img src="/images/read-more.png">
-            </nuxt-link>
+            Read more
+            <img src="/images/read-more.png">
           </button>
-        </div>
+        </nuxt-link>
       </div>
     </div>
     <div class="grid-item">
       <div class="content">
         <img :src="require('../static/images/voice-in.jpg')" @mouseenter="handleHover(5)">
-        <div
+        <nuxt-link
+          to="/voice-in"
           class="overlay"
           style="background-color: rgba(227, 57, 102, 0.9);"
           @mouseleave="handleHover(null)"
@@ -115,18 +111,17 @@
           <div class="name">VoiceIN</div>
           <div class="description">Dating application</div>
           <button class="cta">
-            <nuxt-link to="/voice-in">
-              Read more
-              <img src="/images/read-more-white.png">
-            </nuxt-link>
+            Read more
+            <img src="/images/read-more-white.png">
           </button>
-        </div>
+        </nuxt-link>
       </div>
     </div>
     <div class="grid-item">
       <div class="content">
         <img :src="require('../static/images/another-one.png')" @mouseenter="handleHover(6)">
-        <div
+        <nuxt-link
+          to="/another-one"
           class="overlay"
           style="background-color: rgba(20, 4, 64, 0.9);"
           @mouseleave="handleHover(null)"
@@ -135,12 +130,10 @@
           <div class="name">Another One</div>
           <div class="description">Grocery discount application</div>
           <button class="cta">
-            <nuxt-link to="/another-one">
-              Read more
-              <img src="/images/read-more-white.png">
-            </nuxt-link>
+            Read more
+            <img src="/images/read-more-white.png">
           </button>
-        </div>
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -223,6 +216,7 @@ export default {
 .grid-item {
   .content {
     position: relative;
+    text-align: center;
     img {
       height: auto;
       max-width: 100%;
@@ -237,6 +231,7 @@ export default {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-decoration: none;
       animation: fadein 1s;
       .name {
         font-size: 30px;
@@ -257,27 +252,22 @@ export default {
         cursor: pointer;
         font-size: 20px;
         margin-top: 20px;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &:active {
           outline: none;
         }
-        a {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
-          text-decoration: none;
-          &:hover {
-            img {
-              margin-left: 20px;
-              transition: all 0.2s ease-in;
-              transform: scaleX(1.5) translateX(20px);
-            }
-          }
+        &:hover {
           img {
             margin-left: 20px;
             transition: all 0.2s ease-in;
+            transform: scaleX(1.5) translateX(20px);
           }
+        }
+        img {
+          margin-left: 20px;
+          transition: all 0.2s ease-in;
         }
       }
     }

@@ -1,50 +1,49 @@
 
 <template>
-  <div class="container">
-    <div class="hero center">
-      <h1>Concept</h1>
-      <p>
-        We all, at some point in our lives wanted to cryptocurrency trading. But usually we are not feeling safe investing in something that we don't know.
-        This is where
-        <a
-          href="https://cryptosandbox.eu"
-        >CryptoSandbox</a> comes in.
-        Users will start out with 10.000$ fictional capital and compete against other players in trading currencies which price is being calculated in real-time.
-      </p>
-    </div>
-    <div class="hero">
-      <div class="list">
-        <div class="list-item" v-for="i in 2" :key="i">
-          <img :src="`/images/cryptosandbox/${i}.png`">
+  <div>
+    <InnerNavigation link="https://cryptosandbox.eu"></InnerNavigation>
+    <div class="container">
+      <div class="hero center">
+        <h1>Concept</h1>
+        <p>
+          We all, at some point in our lives wanted to cryptocurrency trading. But usually we are not feeling safe investing in something that we don't know.
+          This is where
+          <a
+            href="https://cryptosandbox.eu"
+          >CryptoSandbox</a> comes in.
+          Users will start out with 10.000$ fictional capital and compete against other players in trading currencies which price is being calculated in real-time.
+        </p>
+      </div>
+      <div class="hero">
+        <div class="list">
+          <div class="list-item" v-for="i in 2" :key="i">
+            <img :src="`/images/cryptosandbox/${i}.png`">
+          </div>
         </div>
       </div>
-    </div>
-    <div class="hero dark">
-      <h1>History</h1>
-      <p>
-        Project was started in
-        <a target="_blank" href="https://nordichack.com/">NordicHack</a> hackathon and finished off later on.
-      </p>
-    </div>
-    <div class="hero light">
-      <h1>Technologies used</h1>
-      <div class="list">
-        <div class="list-item tech">Firebase</div>
-        <div class="list-item tech">Vue.js</div>
-        <div class="list-item tech">Netlify</div>
-        <div class="list-item tech">SASS</div>
+      <div class="hero dark">
+        <h1>History</h1>
+        <p>
+          Project was started in
+          <a target="_blank" href="https://nordichack.com/">NordicHack</a> hackathon and finished off later on.
+        </p>
       </div>
-    </div>
-    <div class="cta">
-      <a href="https://cryptosandbox.eu">
-        <button>Check it out</button>
-      </a>
+      <div class="hero light">
+        <h1>Technologies used</h1>
+        <div class="list">
+          <div class="list-item tech">Firebase</div>
+          <div class="list-item tech">Vue.js</div>
+          <div class="list-item tech">Netlify</div>
+          <div class="list-item tech">SASS</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  layout: 'inner',
   head() {
     return {
       title: 'Cryptocurrency trading sandbox | CryptoSandbox',
