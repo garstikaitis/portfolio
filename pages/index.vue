@@ -52,9 +52,9 @@
                 <li class="item">Creating functional requirements</li>
                 <li class="item">Working within agile framework</li>
                 <li class="item">Iterating</li>
-                <li class="item last">
+                <!-- <li class="item last">
                   <button @click="navigate">See example</button>
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
